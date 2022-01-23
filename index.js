@@ -20,7 +20,7 @@ async function main() {
   await keypress();
 
   // Task 2: Get ETH balance of an address
-  // Double check if the amount is correct here: https://kovan.etherscan.io/address/0xac83d145634980a3f7bed4eb5084dd785b195e23
+  // Double check if the amount is correct here: https://kovan.etherscan.io/address/0x0af2cAEd76f88117AF9683C15233CbC682Fc030c
 
   const balanceInWei = await web3.eth.getBalance(accounts[0]);
   const balanceInETH = web3.utils.fromWei(balanceInWei, "ether");
@@ -61,7 +61,7 @@ async function main() {
       type: "function",
     },
   ];
-  const contractAddress = "0xD9F5d126226aF155c4B3D21FDd7d5C896aFE5DBd";
+  const contractAddress = "0xF4913e58570FD7fD8fB0487104a72f231a20476C";
 
   const contract = new web3.eth.Contract(abi, contractAddress);
   console.log("Smart contract functions: ", contract.methods);
